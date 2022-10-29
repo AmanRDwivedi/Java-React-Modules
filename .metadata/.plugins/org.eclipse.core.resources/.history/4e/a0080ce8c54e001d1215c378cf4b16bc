@@ -1,0 +1,16 @@
+package day7;
+
+class test {
+
+public static void main(String[] args)
+{
+test t = new test();
+t.artr();
+}
+
+public void artr() {
+	finalint i1;
+	System.out.println();
+}
+
+}

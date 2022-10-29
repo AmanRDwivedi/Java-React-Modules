@@ -1,0 +1,21 @@
+package day7;
+
+public class test {
+	static {
+	System.out.println("uuuu");
+	}
+	public  void test() {
+		System.out.println("con");
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("mmm"); 
+		
+		test t = new test();
+		
+	
+
+}

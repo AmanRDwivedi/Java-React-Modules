@@ -1,0 +1,39 @@
+package day7;
+
+public interface ttest {
+
+
+	}
+
+	abstract class Animal
+
+	{
+
+	protected void live()
+
+	{
+
+	System.out.println("Live");
+
+	}
+
+	}
+
+	class Deer extends Animal implements ttest
+
+	{
+
+	}
+
+	public class Main
+
+	{
+
+	public static void main(String[] args) {
+
+	new Deer().live();
+
+	}
+
+
+}

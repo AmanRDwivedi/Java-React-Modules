@@ -1,0 +1,6 @@
+package com.jpa.demo.service;
+
+public class EmployeeServiceImp implements IEmployeeService{
+	
+
+}

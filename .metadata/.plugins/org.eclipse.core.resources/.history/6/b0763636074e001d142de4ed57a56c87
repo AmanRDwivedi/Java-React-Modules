@@ -1,0 +1,28 @@
+package day6;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class listDemo {
+	public static void main(String[] args) {
+
+	List al = new ArrayList();
+	
+	al.add(55);
+	al.add("hello");
+	al.add(null);
+	al.add(12.87);
+	al.add(true);
+	
+	
+	System.out.println(al);
+	System.out.println(al.get(0));
+
+	
+	
+	
+	
+	
+	
+	}
+}

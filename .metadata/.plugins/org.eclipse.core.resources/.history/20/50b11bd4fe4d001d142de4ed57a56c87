@@ -1,0 +1,18 @@
+package day6;
+
+public class WrapperClass {
+
+	public static void main(String[] args) {
+		int a = 40;
+		
+		
+		Integer w = Integer.valueOf(a);
+		
+		System.out.println(w);
+		System.out.println();
+		
+		System.out.println(a);
+		
+	}
+
+}

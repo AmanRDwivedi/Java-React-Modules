@@ -1,0 +1,28 @@
+package day5;
+
+import java.util.*; 
+
+class MyThread implements Runnable{
+
+public void run() {
+
+System.out.println("Run");
+
+}
+}
+
+public class trial {
+
+
+public static void main(String[] args) {
+	MyThread myThread = new MyThread();
+
+Thread t = new Thread(myThread);
+
+t.start();
+
+System.out.println(" Main Thread");
+
+}
+
+}

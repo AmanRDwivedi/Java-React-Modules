@@ -1,0 +1,40 @@
+package lab2;
+//Create a method which accepts an array of integer elements 
+//and return the second smallest element in the array
+
+import java.util.*;
+
+public class Exercise1 {
+
+	static int getSecondSmallest(int a[], int n) {
+
+	      Arrays.sort(a);
+	      //to get the array in sorted order
+
+	      
+	        int second_smallest = 0;
+	        for (int i = n - 2; i >= 0; i--)
+	        {
+	            /*
+	            If the last and second last element are equal then check the previous one else return the second last element.
+	            */
+	            if (a[i] != a[0])
+	            {
+	                second_smallest = a[i];
+	                break;
+	            }
+	        }
+
+	        return second_smallest;
+	    }
+
+	    public static void main(String[] args) {
+	        int a[] = { 12, 35, 1, 10, 34, 1 };
+	        int n = a.length;
+
+	        int answer = getSecondSmallest(a, n);
+
+	        System.out.println("The second largest element in the array is: " + answer);
+
+	    }
+	}

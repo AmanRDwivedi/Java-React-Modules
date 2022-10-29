@@ -1,0 +1,14 @@
+package Day9;
+
+
+interface itr{
+	int add(int x, int y);
+}
+public class LambdaExpression {
+	public static void main(String[] args) {
+		itr a = (x,y) -> x+y;
+		a.add(20,30);
+		}
+	}
+
+

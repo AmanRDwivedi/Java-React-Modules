@@ -1,0 +1,18 @@
+package day7;
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated me
+		
+		StringBuilder sb = new StringBuilder("Java");
+		String s1 = sb.toString();
+		
+		String s2 =  new String(s1);
+		System.out.println(s1 == s2);
+		
+		
+
+	}
+
+}

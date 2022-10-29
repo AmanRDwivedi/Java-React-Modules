@@ -1,0 +1,52 @@
+package day6;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class listDemo {
+	public static void main(String[] args) {
+
+	List al = new ArrayList();
+	
+	al.add(55);
+	al.add("hello");
+	al.add(null);
+	al.add(12.87);
+	al.add(true);
+	
+	
+	System.out.println(al);
+	System.out.println(al.get(0));
+
+	
+	System.out.println();
+	for(int i=0;i<al.size();i++) {
+		System.out.println(al.get(i));
+	}
+	
+	// using iterator()
+	
+	System.out.println();
+	System.out.println("Using  Iterator");
+	
+
+	
+	
+	Iterator itr =al.iterator();
+	while(itr.hasNext()) {
+		System.out.println(itr.next());
+	}
+	
+	
+	//ListIterator to print in reverse order
+	System.out.println("istIterator to print in reverse order");
+	  ListIterator litr = al.listIterator() ;
+	  while(litr.hasPrevious()){
+		  System.out.println(litr.previous());
+	  }
+	
+	
+	}
+}

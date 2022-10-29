@@ -1,0 +1,77 @@
+package day6;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class SetEg {
+	public static void main(String[] args){
+		  
+		HashSet<String> hs = new HashSet<>();
+		
+		hs.add(null);
+		hs.add("one");
+		
+		/*
+		hs.add("c this");
+		hs.add("d is");
+		hs.add("e an");
+		hs.add("f eg");
+		hs.add("g of hash set");
+		hs.add(null);
+		hs.add("10");
+		*/
+		System.out.println("for hash set");
+		for(String s:hs)
+		System.out.println(s);
+		
+		
+		System.out.println();
+		
+		
+		
+	Set<String> lhs = new LinkedHashSet<>();
+	
+		lhs.add("a Hello");
+		lhs.add("b hi");
+		lhs.add("c this");
+		lhs.add("d is");
+		lhs.add("e an");
+		lhs.add("f eg");
+		lhs.add("g of hash set");
+		lhs.add(null);
+		lhs.add("10");
+		
+		System.out.println("for linked hash set");
+		System.out.println(lhs);
+		System.out.println();
+		
+		
+		System.out.println();
+		Set<Character> ts1 = new TreeSet<>();
+		ts1.add('z');
+		ts1.add('a');
+		ts1.add('s');
+		ts1.add('m');
+		ts1.add('i');
+		ts1.add('e');
+		// ts.add(null);
+		System.out.println(ts1);
+
+		// iterator set
+		System.out.println();
+		for(Character c:ts1) {
+			System.out.print(c+" ");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+}

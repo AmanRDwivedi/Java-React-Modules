@@ -1,0 +1,18 @@
+package day7;
+
+public class CompararableComparator {
+	public static void main(String[] args) {
+		
+		System.out.println(new String("Hello")instanceof String);
+		System.out.println("Hello"instanceof String);
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
+		
+	}
+
+
+}

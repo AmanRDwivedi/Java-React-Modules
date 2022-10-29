@@ -1,0 +1,42 @@
+package day6;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class listDemo {
+	public static void main(String[] args) {
+
+	List al = new ArrayList();
+	
+	al.add(55);
+	al.add("hello");
+	al.add(null);
+	al.add(12.87);
+	al.add(true);
+	
+	
+	System.out.println(al);
+	System.out.println(al.get(0));
+
+	
+	System.out.println();
+	for(int i=0;i<al.size();i++) {
+		System.out.println(al.get(i));
+	}
+	
+	// using iterator()
+	
+	System.out.println();
+	System.out.println("Iterator");
+	
+	Iterator itr =al.iterator();
+	while(itr.hasNext()) {
+		System.out.println(itr.next());
+	}
+	
+	
+	
+	
+	}
+}

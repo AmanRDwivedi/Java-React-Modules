@@ -1,0 +1,30 @@
+package day7;
+
+
+
+@FunctionalInterface
+interface Intf1 {
+	int add(int x, int y);
+}
+
+@FunctionalInterface
+interface Intf2 {
+	void message();
+}
+
+@FunctionalInterface
+interface Intf3 {
+	boolean isEven(int x);
+}
+
+public class LambdaExpression {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Intf2 a = () -> System.out.println("Hello There,  Whats up");
+		a.message();
+
+	}
+
+}

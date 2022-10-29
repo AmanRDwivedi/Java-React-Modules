@@ -1,0 +1,24 @@
+package jdbc;
+
+import java.sql.*;
+public class Jdbc {
+
+	 public static void main(String args[]) {
+	     // Connection c = null;
+	      try {
+	    	  //forName() method of Class class is used to register the driver class.
+	    	  // Java program is loading postgresql driver to esteblish database connection.
+	         Class.forName("org.postgresql.Driver");
+	         //getConnection() method of DriverManager - to establish connection
+	         Connection  con = DriverManager
+	            .getConnection("jdbc:postgresql://localhost:5432/prac2",
+	            "postgres", "1234");
+	      } catch (Exception e) {
+	    	  //print the exceptions so errors can be solved
+	         e.printStackTrace();
+	         System.err.println(e.getClass().getName()+": "+e.getMessage());
+	         System.exit(0);
+	      }
+	      System.out.println("Opened database successfully");
+	   }
+}

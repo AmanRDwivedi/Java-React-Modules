@@ -1,0 +1,23 @@
+package day7;
+
+class tesot{ 
+	
+	private int value; 
+	public void display()
+	{
+
+System.out.println("Value is: "+value);
+
+}
+
+}
+
+class test
+{ public static void main(String args[]) { 
+	Object obj=new tesot(); //line 1 
+	
+	((tesot) obj).display();//line2
+}
+
+
+}

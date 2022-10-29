@@ -1,0 +1,27 @@
+package day7;
+
+public class CompararableComparator {
+	public static void main(String[] args) {
+		
+		String str1 ="";
+		String str2;
+		
+		
+		System.out.println(str1.equals(null));
+		
+		/*
+		
+		System.out.println(new String("Hello")instanceof String);
+		System.out.println("Hello"instanceof String);
+		System.out.println(new String("Hello")instanceof Object);
+		System.out.println("Hello"instanceof Object);
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		
+		*/
+		
+	}
+
+
+}
