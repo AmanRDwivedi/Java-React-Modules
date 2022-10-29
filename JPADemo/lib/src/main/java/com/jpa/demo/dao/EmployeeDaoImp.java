@@ -36,8 +36,16 @@ public class EmployeeDaoImp implements IEmployeeDao {
 
 	@Override
 	public Employee getEmployeeById(int empId) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
+		EntityManager em= emf.createEntityManager();
+		
+		// Get emp by id
+		Employee emp= em.find(Employee.class, empId);
+		
+		em.close();
+		emf.close();
+		
+		return emp;
 	}
 
 	@Override

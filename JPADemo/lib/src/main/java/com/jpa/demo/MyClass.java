@@ -45,8 +45,12 @@ public class MyClass {
 		case 2:
 			break;
 		case 3:
-			
+			System.out.println("Enter employee id: ");
+			int empid = sc.nextInt();
+			Employee emp1 = empService.getEmployeeById(empid);
+			System.out.println(emp1);
 			break;
+			
 		case 4:
 			
 			break;
