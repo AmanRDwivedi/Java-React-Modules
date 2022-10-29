@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import com.jpa.demo.entity.Employee;
 
@@ -56,8 +57,15 @@ public class EmployeeDaoImp implements IEmployeeDao {
 
 	@Override
 	public List<Employee> getAllEmployees() {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
+		EntityManager em= emf.createEntityManager();
+		Query query = em.createQuery("select e from Employee e"); // JPQL
+		List<Employee> empList= query.getResultList();
+		
+		em.close();
+		emf.close();
+		
+		return empList;
 	}
 
 	@Override

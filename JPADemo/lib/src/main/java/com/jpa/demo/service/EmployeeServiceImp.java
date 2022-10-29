@@ -40,7 +40,7 @@ public class EmployeeServiceImp implements IEmployeeService{
 	public Employee updateEmployee(int empId, Employee emp) {
 		return	empDao.updateEmployee(empId, emp);
 	}
-
+  
 	@Override
 	public Employee updateEmployeeName(int empId, String newName) {
 		return	empDao.updateEmployeeName(empId, newName);

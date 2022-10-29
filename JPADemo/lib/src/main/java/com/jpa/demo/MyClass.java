@@ -1,5 +1,6 @@
 package com.jpa.demo;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.jpa.demo.entity.Employee;
@@ -52,8 +53,10 @@ public class MyClass {
 			break;
 			
 		case 4:
-			
-			break;
+			List<Employee> employees=empService.getAllEmployees();
+			for(Employee employee: employees) {
+				System.out.println(employee);
+			}
 		case 5:
 			break;
 		case 6:
