@@ -1,6 +1,7 @@
 package com.jpa.demo.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,7 +10,7 @@ import javax.persistence.Table;
 public class Address {
 	
 	@Id       //to hibernate for PK
-	//@GeneratedValue
+	@GeneratedValue
 	private int addrId;
 	private String city;
 	private String state;
@@ -18,6 +19,11 @@ public class Address {
 	public Address(int addrId, String city, String state) {
 		super();
 		this.addrId = addrId;
+		this.city = city;
+		this.state = state;
+	}
+	public Address(String city, String state) {
+		super();
 		this.city = city;
 		this.state = state;
 	}

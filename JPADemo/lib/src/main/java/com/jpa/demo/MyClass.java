@@ -1,9 +1,12 @@
 package com.jpa.demo;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.jpa.demo.entity.Address;
 import com.jpa.demo.entity.Employee;
+import com.jpa.demo.entity.Login;
 import com.jpa.demo.service.EmployeeServiceImp;
 import com.jpa.demo.service.IEmployeeService;
 
@@ -27,8 +30,8 @@ public class MyClass {
 
 		switch (optionSelected) {
 		case 1:
-			System.out.println("Enter Employee Id");
-			int empId = sc.nextInt();
+			//System.out.println("Enter Employee Id");
+		//	int empId = sc.nextInt();
 			
 			System.out.println("Enter Employee Name");
 			String name =  sc.next();
@@ -36,12 +39,73 @@ public class MyClass {
 			System.out.println("Enter Employee Salary");
 			double salary =  sc.nextDouble();
 			
-			Employee emp = new Employee(empId, name, salary);
+			System.out.println("Enter Employee Email add");
+			String email =  sc.next();
+			
+			System.out.println("Enter Employee password");
+			String pass =  sc.next();
+			//login obj
+			/*
+			Login login = new Login(email,pass);
+			
+			Employee emp = new Employee(name, salary,login);
 			
 			Employee newEmp =empService.addEmployee(emp); 
 			System.out.println(newEmp);
 			
+			System.out.println("Enter number of addresses to be added");
+			int numAddr = sc.nextInt();
+			List<Address> addrList = new ArrayList<>();
+			for(int i=0; i<numAddr;i++) {
+				
+				System.out.println("Enter city name: ");
+				String city = sc.next();
+
+				System.out.println("Enter state name: ");
+				String state = sc.next();
+				// Create address obj
+				Address addr = new Address(city, state);
+				// add addr obj to addressList 
+				addrList.add(addr);
+				
+				// Create emp object using login and address details
+				Employee emp = new Employee(name, salary, login, addrList);
+				
+				// Call service addEmployee() method to add emp to db
+				Employee newEmp = empService.addEmployee(emp);
+				System.out.println("New Employee: " + newEmp);
+				break;
+			}
 			
+			break;
+			*/
+			
+
+			// Get Address details
+			System.out.println("Enter number of addresses to be added");
+			int numAddr = sc.nextInt();
+			List<Address> addrList = new ArrayList<>();
+			for(int i=0; i<numAddr;i++) {
+				
+				System.out.println("Enter city name: ");
+				String city = sc.next();
+
+				System.out.println("Enter state name: ");
+				String state = sc.next();
+				// Create address obj
+				Address addr = new Address(city, state);
+				// add addr obj to addressList 
+				addrList.add(addr);
+			}
+			
+			// Create login object using email & password
+			Login login = new Login(email, pass);
+			// Create emp object using login and address details
+			Employee emp = new Employee(name, salary, login, addrList);
+			
+			// Call service addEmployee() method to add emp to db
+			Employee newEmp = empService.addEmployee(emp);
+			System.out.println("New Employee: " + newEmp);
 			break;
 		case 2:
 			break;
@@ -58,7 +122,19 @@ public class MyClass {
 				System.out.println(employee);
 			}
 		case 5:
+			System.out.println("Enter employee id: ");
+			int id = sc.nextInt();
+			System.out.println("Enter employee Name : ");
+			String eName = sc.next();
+			System.out.println("Enter employee Sala: ");
+			Double sal = sc.nextDouble();
+			Employee emp2 =  new Employee(id, eName, sal);
+			
+			Employee ude = empService.updateEmployee(id, emp2);
+			
+			System.out.println(ude);
 			break;
+			
 		case 6:
 			break;
 		case 7:

@@ -70,9 +70,29 @@ public class EmployeeDaoImp implements IEmployeeDao {
 
 	@Override
 	public Employee updateEmployee(int empId, Employee emp) {
-		// TODO Auto-generated method stub
-		return null;
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PU");
+		EntityManager em= emf.createEntityManager();
+		//Query query = em.createQuery("select e from Employee e"); // JPQL
+		
+		// to get empId
+		Employee dbEmp = em.find(Employee.class, empId);
+				
+	
+		//update
+		dbEmp .setEname(emp.getEname());
+		dbEmp.setSalary(emp.getSalary());
+		
+		em.getTransaction().begin();
+		Employee updateEmp =em.merge(dbEmp);
+		em.getTransaction().commit();
+		
+		//close em an emf
+		
+		em.close();
+		emf.close();
+		return  dbEmp;
 	}
+	
 
 	@Override
 	public Employee updateEmployeeName(int empId, String newName) {

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+     
+     <!-- Constuctor to pass value for emp obj -->
+     <bean id="empBean1" class="SpringCore.Employee">
+		<constructor-arg name="empId" value="1001" type="int"></constructor-arg>
+		<constructor-arg name="eName" value="Ram"></constructor-arg>
+		<constructor-arg name="address" ref="empBean4"></constructor-arg>
+	</bean>
+                
+    <bean id="empBean2" class="SpringCore.Employee">
+		<constructor-arg name="empId" value="1002" type="int"></constructor-arg>
+		<constructor-arg name="eName" value="Raman"></constructor-arg>
+	</bean>
+	
+	<bean id="empBean4" class="SpringCore.Address">
+		<constructor-arg name="addId" value="730" type="int"></constructor-arg>
+		<constructor-arg name="city" value="Mumbai"></constructor-arg>
+		<constructor-arg name="state" value="MH"></constructor-arg>
+	</bean>
+	 <bean id="empBean3" class="SpringCore.Address">
+		<constructor-arg index="0" value="730" type="int"></constructor-arg>
+		<constructor-arg index="1" value="Mumbai"></constructor-arg>
+		<constructor-arg index="2" value="MH"></constructor-arg>
+	</bean>
+ </beans>
