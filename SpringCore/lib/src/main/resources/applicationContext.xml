@@ -17,6 +17,22 @@
 		<constructor-arg name="eName" value="Raman"></constructor-arg>
 	</bean>
 	
+	
+	<bean id="beanwC" class="SpringCore.Employee">
+		<constructor-arg name="empId" value="1008" type="int"></constructor-arg>
+		<constructor-arg name="eName" value="Ram"></constructor-arg>
+		<constructor-arg name="address" ref="empBean4"></constructor-arg>
+		<constructor-arg name="cNo">
+			<list>
+				<value>93242527</value>
+				<value>978536759</value>
+				<value>976764468</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	
+	
 	<bean id="empBean4" class="SpringCore.Address">
 		<constructor-arg name="addId" value="730" type="int"></constructor-arg>
 		<constructor-arg name="city" value="Mumbai"></constructor-arg>

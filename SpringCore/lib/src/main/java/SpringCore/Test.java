@@ -25,6 +25,10 @@ public class Test {
 		
 		//get beans from beanfactory
 		
+		Employee empwC = (Employee)fact.getBean("beanwC");
+		System.out.println(empwC.getcNo());
+		
+		
 		Employee emp1 = (Employee) fact.getBean("empBean1");
 		System.out.println(emp1.getEmpId());
 		//do it for other objects and classes
@@ -45,7 +49,7 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContextInj.xml");
 		
 		Employee e3 = (Employee) context.getBean("iBean1");
-		System.out.println(e3.getEmpId());
+		System.out.println(e3.getcNo());
 	}
 
 }
